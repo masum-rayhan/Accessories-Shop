@@ -1,4 +1,4 @@
-﻿using Accessories.Models.Data_Tables;
+﻿using Accessories.Models.DataTables;
 using Accessories.Models.DataTables.Dto;
 using System;
 using System.Collections.Generic;

@@ -12,6 +12,5 @@ public interface IUnitOfWork
     Task SaveAsync();
 
     IBlobService BlobService { get; }
-    IMenuItemRepo MenuItemService { get; }
-    IShoppingCartRepo ShoppingCartRepo { get; }
+    IMenuItemRepo MenuItems { get; }
 }
