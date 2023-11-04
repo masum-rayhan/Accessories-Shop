@@ -9,5 +9,9 @@ namespace Accessories.DataAccess.Repository.IRepository;
 
 public interface IUnitOfWork
 {
+    Task SaveAsync();
+
     IBlobService BlobService { get; }
+    IMenuItemRepo MenuItemService { get; }
+    IShoppingCartRepo ShoppingCartRepo { get; }
 }

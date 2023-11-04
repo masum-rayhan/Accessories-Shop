@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Accessories.Models.Data_Tables;
+namespace Accessories.Models.DataTables;
 
 public class CartItem
 {

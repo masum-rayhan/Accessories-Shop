@@ -1,4 +1,4 @@
-﻿using Accessories.Models.Data_Tables;
+﻿using Accessories.Models.DataTables;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
