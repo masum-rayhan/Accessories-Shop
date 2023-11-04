@@ -16,4 +16,5 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<MenuItem> MenuItems { get; set; }
+    public DbSet<CartItem> CartItems { get; set; }
 }
