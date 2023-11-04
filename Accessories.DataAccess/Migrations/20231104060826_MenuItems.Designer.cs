@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Accessories.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231104055701_MenuItems")]
+    [Migration("20231104060826_MenuItems")]
     partial class MenuItems
     {
         /// <inheritdoc />

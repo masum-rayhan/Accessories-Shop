@@ -21,30 +21,6 @@ namespace Accessories.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Accessories.Models.Data_Tables.CartItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("MenuItemId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ShoppingCartId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MenuItemId");
-
-                    b.ToTable("CartItems");
-                });
-
             modelBuilder.Entity("Accessories.Models.Data_Tables.MenuItem", b =>
                 {
                     b.Property<int>("Id")
@@ -79,59 +55,6 @@ namespace Accessories.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MenuItems");
-                });
-
-            modelBuilder.Entity("Accessories.Models.Data_Tables.OrderDetails", b =>
-                {
-                    b.Property<int>("OrderDetailsId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderDetailsId"));
-
-                    b.Property<string>("ItemName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MenuItemId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrderHeaderId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrderDetailsId");
-
-                    b.HasIndex("MenuItemId");
-
-                    b.ToTable("OrderDetails");
-                });
-
-            modelBuilder.Entity("Accessories.Models.Data_Tables.CartItem", b =>
-                {
-                    b.HasOne("Accessories.Models.Data_Tables.MenuItem", "MenuItem")
-                        .WithMany()
-                        .HasForeignKey("MenuItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MenuItem");
-                });
-
-            modelBuilder.Entity("Accessories.Models.Data_Tables.OrderDetails", b =>
-                {
-                    b.HasOne("Accessories.Models.Data_Tables.MenuItem", "MenuItem")
-                        .WithMany()
-                        .HasForeignKey("MenuItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MenuItem");
                 });
 #pragma warning restore 612, 618
         }
