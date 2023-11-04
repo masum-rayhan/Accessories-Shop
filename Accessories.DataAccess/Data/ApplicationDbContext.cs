@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Accessories.Models.Data_Tables;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,4 +14,6 @@ public class ApplicationDbContext : DbContext
     {
 
     }
+
+    public DbSet<MenuItem> MenuItems { get; set; }
 }
